@@ -11,7 +11,7 @@ public static class InfrastructureServiceRegistration
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration config)
     {
         services.AddDbContext<FinanceDbContext>(options =>
-            options.UseSqlServer(config.GetSection("ConnectionStrings:FinanceServiceConnection").Value));
+            options.UseSqlServer(config.GetSection("ConnectionStrings:DatabaseConnection").Value));
         services.AddScoped<IPayInformationRepository, PayInformationRepository>();
         services.AddScoped<IIncomeInformationRepository, IncomeInformationRepository>();
         return services;

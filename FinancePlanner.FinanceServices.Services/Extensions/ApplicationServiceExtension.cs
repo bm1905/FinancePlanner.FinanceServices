@@ -25,8 +25,8 @@ public static class ApplicationServiceExtension
     private static void AddHealthChecks(this IServiceCollection services, IConfiguration config)
     {
         services.AddHealthChecks()
-            .AddSqlServer(config.GetSection("ConnectionStrings:FinanceServiceConnection").Value ?? string.Empty,
-                name: "FINANCE_SERVICES Database Health",
+            .AddSqlServer(config.GetSection("ConnectionStrings:DatabaseConnection").Value ?? string.Empty,
+                name: "Finance Services Database Health",
                 failureStatus: HealthStatus.Degraded);
     }
 

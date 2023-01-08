@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinancePlanner.FinanceServices.Infrastructure.Migrations
 {
     [DbContext(typeof(FinanceDbContext))]
-    [Migration("20221129231517_InitialCreate")]
+    [Migration("20230108212735_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
